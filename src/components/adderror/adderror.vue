@@ -7,7 +7,6 @@
     <Goods-com/>
     <span>{{qq}}</span>
     <div class="wrapper homeWrapper" ref="homeWrapper">
-
       <div class="error">
         <div class="show">
           <div>
@@ -64,40 +63,11 @@ import Goods from "./components/goods";
 import P from "./components/p";
 import BScroll from "better-scroll";
 import request from "../../utils/http.js";
+import "@/utils/Date.js";
 export default {
-  async created() {
-
-    let result = await request({
-      // url: "/abc/getCateProductsList",
-      url:  "/abc/?token=7a9e65b18bdcdc7f70240e4cee204c8f/sys/user/save",
-      method: "post",
-      headers: {
-        // 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-        // "token":"2e86ad03f5ef8225f80852ea8ad163b2",
-      },
-      params: {
-        // token:"2e86ad03f5ef8225f80852ea8ad163b2",
-        // pageIndex: 1,
-        // pageSize: 20,
-        // pageId: "",
-        // topicId: "",
-        // categoryId: 621,
-        // onclickIndex: 0,
-        // sortType: 0,
-        // sortValue: 0
-      }
-
-    // let result = await request({
-      // url : "/abc/getCateProductsList?pageIndex=1&pageSize=20&pageId=&topicId=&categoryId=621&onclickIndex=0&sortType=0&sortValue=0"
-      // url:  "/abc/sys/user/info"
-    });
-    console.log(result);
-    // this.qq = result.data.blockList[0].bid;
-    // console.log(this.qq);
-  },
   components: {
     "Goods-com": Goods,
-    "P-com": P,
+    "P-com": P
   },
   data() {
     return {
@@ -122,12 +92,122 @@ export default {
     };
   },
   mounted() {
-    // this.scroll = new BScroll(this.$refs.homeWrapper, {
-    //   pullUpLoad: true,
-    //   click: true,
-    //   tap: true
-    // });
-    // console.log(this.scroll);
+    console.log(this.$http.adornUrl("/work/workwork/save"));
+
+    var a = new Date();
+    console.log(a);
+    this.$http({
+      url: this.$http.adornUrl("/work/workwork/save"),
+      method: "post",
+      data: {
+        address: "123123",
+        avatar: "3232323",
+        createTime: new Date("2019-04-23T00:31:13.311Z").Format(
+          "yyyy-MM-dd hh:mm:ss"
+        ),
+        dataScope: 0,
+        dataScopeCode: "string",
+        email: "string",
+        username: "yy",
+
+        address: "string",
+        agencyFlag: true,
+        cancellog: {
+          createTime: "2019-04-23T01:49:48.584Z",
+          id: 0,
+          remark: "string",
+          status: "CREATED",
+          workId: 0
+        },
+        createlog: {
+          createTime: "2019-04-23T01:49:48.584Z",
+          id: 0,
+          remark: "string",
+          status: "CREATED",
+          workId: 0
+        },
+        description: "string",
+        engineer: {
+          address: "string",
+          avatar: "string",
+          createTime: "2019-04-23T01:49:48.584Z",
+          createUserId: 0,
+          dataScope: 0,
+          dataScopeCode: "string",
+          email: "string",
+          fullName: "string",
+          jobNo: "string",
+          mobile: "string",
+          orgAddress: "string",
+          orgCode: "string",
+          orgId: 0,
+          orgName: "string",
+          password: "string",
+          professionalScore: 0,
+          roleIdList: [0],
+          roleKeyMap: {},
+          salt: "string",
+          serviceScore: 0,
+          status: 0,
+          userId: 0,
+          username: "string"
+        },
+        engineerId: 0,
+        estimatedArrivalTime: "2019-04-23T01:49:48.584Z",
+        faultCommonId: 0,
+        faultType: {
+          id: 0,
+          name: "string",
+          url: "string"
+        },
+        faultTypeId: 0,
+        id: 0,
+        imagefaults: [{}],
+        logoperations: [
+          {
+            createTime: "2019-04-23T01:49:48.584Z",
+            id: 0,
+            remark: "string",
+            status: "CREATED",
+            workId: 0
+          }
+        ],
+        no: "string",
+        orgId: 0,
+        processType: "string",
+        serveTime: "2019-04-23T01:49:48.584Z",
+        status: "CREATED",
+        user: {
+          address: "string",
+          avatar: "string",
+          createTime: "2019-04-23T01:49:48.584Z",
+          createUserId: 0,
+          dataScope: 0,
+          dataScopeCode: "string",
+          email: "string",
+          fullName: "string",
+          jobNo: "string",
+          mobile: "string",
+          orgAddress: "string",
+          orgCode: "string",
+          orgId: 0,
+          orgName: "string",
+          password: "string",
+          professionalScore: 0,
+          roleIdList: [0],
+          roleKeyMap: {},
+          salt: "string",
+          serviceScore: 0,
+          status: 0,
+          userId: 0,
+          username: "string"
+        },
+        userId: 0,
+        valuationFlag: true
+      }
+    }).then(({ data }) => {
+      console.log(data);
+    });
   },
   methods: {
     add() {

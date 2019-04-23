@@ -9,8 +9,10 @@ import "./assets/iconfont/iconfont.css";
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import store from "./store"
+import httpRequest from '@/utils/http' // api: https://github.com/axios/axios
 Vue.config.productionTip = false
 Vue.use(MintUI)
+Vue.prototype.$http = httpRequest; // ajax请求方法
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
