@@ -30,7 +30,7 @@ export default {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 0;
-  // padding: 0 .15rem;
+  padding: 0 .15rem;
   img{
     width: 3.26rem;
     height: 2.78rem;

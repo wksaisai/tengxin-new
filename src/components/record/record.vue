@@ -207,6 +207,7 @@ div {
   }
   .body {
     .mint-navbar {
+      height: 1.1rem;
       .mint-tab-item {
         display: block;
         margin: 0 0.4rem;

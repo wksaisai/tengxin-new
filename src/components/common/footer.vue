@@ -62,6 +62,7 @@ export default {
     #footer>ul>li,#footer>ul>li>a{
         width: 100%;
         height: 100%;
+        color: #adadad;
     }
     #footer>ul>li>a{
          display: flex;

@@ -11,7 +11,8 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       "/abc":{
-        target:"http://192.168.10.175:8058/dcc-oms/swagger-ui.html#/",
+        // target:"http://192.168.10.175:8058/dcc-oms/swagger-ui.html#/",
+        target:"http://192.168.8.217:8058/dcc-oms/swagger-ui.html#/",
         // target:"http://m.biyao.com/classify",
         changeOrigin:true,
         pathRewrite:{

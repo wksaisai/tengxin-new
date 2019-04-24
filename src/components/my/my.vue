@@ -30,7 +30,7 @@
 
   <div class="header">
     <div class="top-1">
-      <span>报障</span>
+      <span>我的</span>
       <img src="../../assets/img/tong_zhi.png" @click="handleto()">
     </div>
     <Goods-com/>
@@ -38,7 +38,7 @@
       <div class="content">
         <div class="content-com">
           <div v-for="(item,index) in list" :key="index">
-            <router-link :to="{name:item.name}">
+            <router-link :to="{name:item.path}">
               <img src="../../assets/img/shujutongji.png">
               <span>{{item.con}}</span>
             </router-link>
@@ -125,10 +125,22 @@ export default {
         border-radius: 0.1rem;
         margin: 0 auto;
         margin-top: 1.1rem;
-        padding: 0 .11rem;
+        padding: 0 0.11rem;
         div {
-          height: 1.15rem;
-          border-bottom: 1px solid #dadada;
+          a {
+            height: 1.15rem;
+            border-bottom: 1px solid #dadada;
+            display: flex;
+            align-items: center;
+            img{
+              margin-left: .6rem;
+            }
+            span{
+              font-size: .28rem;
+              color: black;
+              margin-left: .5rem;
+            }
+          }
         }
       }
     }

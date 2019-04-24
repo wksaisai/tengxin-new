@@ -11,6 +11,7 @@ import Book from "../components/book/book.vue";
 import Appraise from "../components/appraise/appraise.vue";
 import Adderror from "../components/adderror/adderror.vue";
 import Success from "../components/success/success.vue";
+import Antd from "../components/antd/antd.vue";
 import Form from "../components/form/form.vue";
 import Plan from "../components/plan/plan.vue";
 import Login from "../components/login/login.vue";
@@ -20,7 +21,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    { path: "/", redirect: "/login" },
+    { path: "/", redirect: "/home" },
     { path: '/login', name: 'login', component: Login },
     { path: '/home', name: 'home', component: Home },
     { path: '/record', name: 'record', component: Record },
@@ -31,6 +32,7 @@ export default new Router({
     { path: "/book", name: "book", component: Book },
     { path: "/appraise", name: "appraise", component: Appraise },
     { path: "/success", name: "success", component: Success },
+    { path: "/antd", name: "antd", component: Antd },
     { path: "/form", name: "form", component: Form },
     { path: "/plan", name: "plan", component: Plan },
     { path: "/task", name: "task", component: Task },
